@@ -1,0 +1,33 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+}
+body{
+    background-color: black;
+    border: 1px solid black;
+}
+
+#container{
+    border: 1px solid red;
+    margin: 100px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+a{
+    display:block;
+    font-size:40px;
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+    padding-left: 7px; padding-right: 7px;
+    background-color: purple;
+    width: auto;
+}
