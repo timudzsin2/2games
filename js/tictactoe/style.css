@@ -1,0 +1,40 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+html,
+body {
+    height: 100%;
+    background-color: black;
+}
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.2)), url(hatter.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#jatekter {
+    border: 10px solid white;
+    border-radius: 100px;
+    overflow: hidden;
+    height: 100%;
+    aspect-ratio: 1/1;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.elem {
+    border: 6px solid white;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.elem > * {
+    font-size: 250px;
+    color: white;
+    font-family: "Times New Roman", Times, serif;
+}
