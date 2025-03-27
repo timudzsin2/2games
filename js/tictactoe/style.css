@@ -1,40 +1,39 @@
-* {
+*{
     margin: 0px;
-    padding: 0px;
     box-sizing: border-box;
 }
-html,
-body {
+html, body{
     height: 100%;
     background-color: black;
 }
-body {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.2)), url(hatter.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#jatekter {
-    border: 10px solid white;
-    border-radius: 100px;
-    overflow: hidden;
+#tabla{
     height: 100%;
+    max-width: 100vw;
+    max-height: 100vw;
     aspect-ratio: 1/1;
-    margin: auto;
+    background-color: black;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    font-size: 400px;  /* ez fog átállítódni a négyzetek számától függően */
+
 }
-.elem {
-    border: 6px solid white;
+.negyzet{
+    width: 100%;
     aspect-ratio: 1/1;
+    border: white solid 1px;
+
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1em;
+    color: white;
+    font-weight: bold;
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
-}
-.elem > * {
-    font-size: 250px;
-    color: white;
-    font-family: "Times New Roman", Times, serif;
+    user-select: none;
 }
