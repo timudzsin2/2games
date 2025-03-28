@@ -20,8 +20,10 @@ export default class Negyzet{
             // a lépéstől megfelelően X vagy O kerül a példány tartalmába
             if(aTabla.getLepes() % 2 == 0){
                 this.#tartalom = "X";
+                temp.classList.add("kek")
             }else{
                 this.#tartalom = "O";
+                temp.classList.add("rozsaszin")
             }
             // a div elem szöveg tartalmát beállítom az példány tartalmára
             temp.textContent = this.#tartalom;

@@ -20,6 +20,7 @@ body{
     background-color: black;
     display: grid;
     font-size: 400px;  /* ez fog átállítódni a négyzetek számától függően */
+    border: white solid 1px;
 
 }
 .negyzet{
@@ -37,3 +38,13 @@ body{
     justify-content: center;
     user-select: none;
 }
+
+.kek{
+    color: lightblue;
+}
+.rozsaszin{
+    color: pink;
+}
+
+
+  
