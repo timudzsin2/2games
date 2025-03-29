@@ -18,6 +18,7 @@ export class Tabla{
         }
 
         this.tablaElrendezo();   
+        this.maradtDBesNyeresEllenorzo();
     }
 
     maradtDBesNyeresEllenorzo(){
@@ -27,7 +28,11 @@ export class Tabla{
                 db++;
             }
         }
-        console.log(db);
+        document.title = `${db} lámpa maradt`;
+        if(db == 0){
+            alert("Hurrá, meghosszabítottad a Föld életét!");
+            location.reload();
+        }
     }
 
     kapcsolSzomszedok(eredeti){
