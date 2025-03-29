@@ -1,6 +1,12 @@
+import { aTabla } from "./main.js";
+
 export class Lampa{
     #felkapcsolva = false;
+    static peldanySzam = 0;
+    #id;
     constructor(){
+        this.#id = Lampa.peldanySzam;
+        Lampa.peldanySzam++;
         if(Math.floor(Math.random() * 5) == 0){
             this.#felkapcsolva = true;
         }
@@ -16,12 +22,14 @@ export class Lampa{
         }
         document.getElementById("tabla").insertAdjacentHTML("beforeend",html);
     }
+
     clickEventListenerHozzaad(){
         this.elem = document.querySelector(".lampa:last-child");
         this.elem.addEventListener("click",()=>{
-            this.kapcsol();
+            this.kapcsolSzomszedokkal();
         });
     }
+
     kapcsol(){
         if(this.#felkapcsolva){
             this.elem.classList.remove("fel");
@@ -31,7 +39,14 @@ export class Lampa{
             this.elem.classList.add("fel");
         }
         this.#felkapcsolva = !this.#felkapcsolva;
-        
-        console.log(this);
+    }
+
+    kapcsolSzomszedokkal(){
+        this.kapcsol();
+        aTabla.kapcsolSzomszedok(this.#id);
+    }
+
+    getFelkapcsolva(){
+        return this.#felkapcsolva;
     }
 }
